@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI",
+    "sources": [
+        "headers.scss"
+    ],
+    "names": [],
+    "file": "headers.css"
+}
