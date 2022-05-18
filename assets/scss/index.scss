@@ -1,0 +1,65 @@
+@import "./main.scss";
+
+
+/***********************************/
+/***********************************/
+/***********************************/
+
+
+
+@media all and (max-width:$mobile){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$mobile) and (max-width:$tablette){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$desktop) and (max-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+
+header {
+  display: flex;
+}

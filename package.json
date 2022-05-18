@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "https://haiku-san.github.io/OC-P3/",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass ./assets/scss/index.scss ./style.css -w",
+    "prefix": "postcss ./style.css --use autoprefixer -d ./public/css/prefixed/"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiku-san/OC-P3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/haiku-san/OC-P3/issues"
+  },
+  "homepage": "https://github.com/haiku-san/OC-P3#readme"
+}
