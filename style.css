@@ -392,7 +392,7 @@ header > img {
   padding: 30px 0px 20px 0px;
 }
 
-nav {
+body > div > nav {
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -400,11 +400,10 @@ nav {
   justify-content: space-between;
   width: 100%;
 }
-nav * {
+body > div > nav * {
   padding: 5px 8px;
 }
-
-.place {
+body > div > nav div.place {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,8 +412,7 @@ nav * {
   color: rgb(43, 43, 43);
   width: 100%;
 }
-
-.presentation {
+body > div > nav div.presentation {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
@@ -423,21 +421,21 @@ nav * {
   width: 100%;
   padding: 40px;
 }
-.presentation > h1 {
+body > div > nav div.presentation > h1 {
   font-weight: 800;
   font-size: 30px;
   text-align: center;
   padding: 0px 20px 0px 20px;
   margin: 20px 0 10px 0;
 }
-.presentation > h3 {
+body > div > nav div.presentation > h3 {
   font-weight: 300;
   font-size: 20px;
   text-align: center;
   padding: 0px 40px 0px 40px;
   margin: 10px 0 20px 0;
 }
-.presentation > .btn {
+body > div > nav div.presentation > .btn {
   padding: 20px;
   margin: 20px;
   background-color: #FF79DA;
@@ -449,24 +447,22 @@ nav * {
   box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.how-to {
+body > div > main section.how-to {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.how-to > h1 {
+body > div > main section.how-to > h1 {
   padding: 20px 0 0 30px;
   margin-bottom: 0;
 }
-
-.explanations {
+body > div > main section.how-to .explanations {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
 }
-
-.explanations__card {
+body > div > main section.how-to .explanations .explanations__card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -481,7 +477,7 @@ nav * {
   box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
   font-size: 12px;
 }
-.explanations__card > div {
+body > div > main section.how-to .explanations .explanations__card > div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -489,14 +485,14 @@ nav * {
   padding: 0;
   margin-left: -15px;
 }
-.explanations__card > div * {
+body > div > main section.how-to .explanations .explanations__card > div * {
   padding: 12px;
   margin: 0;
 }
-.explanations__card i {
+body > div > main section.how-to .explanations .explanations__card i {
   color: grey;
 }
-.explanations__card .number-bubble {
+body > div > main section.how-to .explanations .explanations__card .number-bubble {
   background-color: #9356DC;
   padding: 0px;
   margin: 0;
@@ -508,15 +504,15 @@ nav * {
   font-size: 15px;
   margin-right: 15px;
 }
-.explanations__card .number-bubble * {
+body > div > main section.how-to .explanations .explanations__card .number-bubble * {
   margin: 0;
-  padding: 10px;
+  margin-top: -4px;
   font-weight: 400;
 }
-.explanations__card.explanations__card--alt {
+body > div > main section.how-to .explanations .explanations__card.explanations__card--alt {
   background-color: rgba(147, 86, 220, 0.15);
 }
-.explanations__card.explanations__card--alt i {
+body > div > main section.how-to .explanations .explanations__card.explanations__card--alt i {
   color: #9356dc;
 }
 
