@@ -391,6 +391,11 @@ header > img {
   width: 50%;
   padding: 30px 0px 20px 0px;
 }
+@media screen and (min-width: 900px) {
+  header > img {
+    width: 200px;
+  }
+}
 
 body > div > nav {
   z-index: 1;
@@ -436,13 +441,12 @@ body > div > nav div.presentation > h3 {
   margin: 10px 0 20px 0;
 }
 body > div > nav div.presentation > .btn {
-  padding: 20px;
+  padding: 20px 30px;
   margin: 20px;
   background-color: #FF79DA;
   color: white;
   border: 0;
   border-radius: 40px;
-  min-width: 60%;
   font-size: 18px;
   box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
@@ -516,42 +520,48 @@ body > div > main section.how-to .explanations .explanations__card.explanations_
 body > div > main section.how-to .explanations .explanations__card.explanations__card--alt i {
   color: #9356dc;
 }
-
-.restaurants {
+body > div > main .restaurants {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 60px 30px;
 }
-
-.restaurants_list {
+body > div > main .restaurants .restaurants_list {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 10px 0;
 }
-.restaurants_list .restaurant-card {
+@media screen and (min-width: 900px) {
+  body > div > main .restaurants .restaurants_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+body > div > main .restaurants .restaurants_list .restaurant-card {
   position: relative;
   box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
   border-radius: 30px;
   width: 100%;
   margin: 10px 0;
 }
-.restaurants_list .restaurant-card > img {
+@media screen and (min-width: 900px) {
+  body > div > main .restaurants .restaurants_list .restaurant-card {
+    width: 45%;
+  }
+}
+body > div > main .restaurants .restaurants_list .restaurant-card > img {
   position: relative;
   width: 100%;
   border-radius: 30px 30px 0 0;
   margin-bottom: 10px;
   height: 220px;
   object-fit: cover;
-  object-position: 0px -60px;
 }
-.restaurants_list .restaurant-card > .restaurant-img-alt {
-  object-position: 0px -200px;
-}
-.restaurants_list .restaurant-card .restaurant-card__infos {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos {
   padding: 0px 25px;
   margin: 0;
   display: flex;
@@ -560,24 +570,24 @@ body > div > main section.how-to .explanations .explanations__card.explanations_
   align-items: center;
   margin-bottom: 20px;
 }
-.restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2, .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2, body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
   margin: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
   line-height: 22px;
 }
-.restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2 {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2 {
   font-weight: 600;
   font-size: 24px;
 }
-.restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
   font-weight: 400;
   font-size: 20px;
 }
-.restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__like-btn {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__like-btn {
   margin: 1000px;
 }
-.restaurants_list .restaurant-card > p {
+body > div > main .restaurants .restaurants_list .restaurant-card > p {
   position: absolute;
   top: 5px;
   right: 20px;

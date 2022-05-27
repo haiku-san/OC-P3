@@ -1,10 +1,18 @@
 /**/
 
 
-$mobile: "taille  S";
-$tablette: "taille M";
-$desktop: "taille L";
-$tv: "taille XL";
+// $mobile: "taille  S";
+// $tablette: "taille M";
+// $desktop: "taille L";
+// $tv: "taille XL";
+
+// Breakpoints //
+
+$breakpoint:(
+    mobile:399px,
+    tablette:899px,
+    desktop:1199px
+);
 
 // Colors //
 
