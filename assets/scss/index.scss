@@ -160,7 +160,7 @@ body>div>main {
     display: flex;
     flex-direction: column;
     width: 100%;
-  
+    padding: 20px 0 60px 0;
     >h1 {
       padding: 20px 0 0 30px;
       margin-bottom: 0;
@@ -231,15 +231,114 @@ body>div>main {
       }
     
     }
-  }
-  
-  
-  
-  
-  
+  } 
 }  
 
+.restaurants {
+  background-color: $light-bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 30px;
+}
 
 
+.restaurants_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  .restaurant-card {
+    position: relative;
+    box-shadow: 0 5px 30px 0px rgba(black, .18);
+    border-radius: 30px;
+    width: 100%;
+    margin: 10px 0;
+    >img {
+      position: relative;
+      width: 100%;
+      border-radius: 30px 30px 0 0;
+      margin-bottom: 10px;
+      height: 220px;
+      object-fit: cover;
+      object-position: 0px -60px;
+    }
+    >.restaurant-img-alt {
+      object-position: 0px -200px;
 
+    }
+    .restaurant-card__infos {
+      padding: 0px 25px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .restaurant-card__txt {
+        h2, h3 {
+          margin: 10px 0 10px 0;
+          display: flex;
+          flex-direction: column;
+          line-height: 22px;
+        }
+        h2 {
+          font-weight: 600;
+          font-size: 24px;
 
+        }
+        h3 {
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+      .restaurant-card__like-btn {
+        margin: 1000px;
+      }
+    }
+    >p {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      color: #008766;
+      background-color: #99E2D0;
+      padding: 10px;
+      font-weight: 600;
+      box-shadow: 0 5px 30px 0px rgba(black, .18);
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg-color;
+  padding: 40px;
+
+  >img {
+    filter: brightness(100);
+    width: 150px;
+  }
+  ul {
+    padding: 20px 0;
+    margin: 0;
+    line-height: 20px;
+    text-decoration: none;
+    color: white;
+    i {
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px 0;
+      >p {
+        padding: 0px 15px;
+        margin: 0;
+      }
+    }
+  }
+  
+}
