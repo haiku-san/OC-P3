@@ -388,13 +388,8 @@ header {
   box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
 header > img {
-  width: 50%;
+  width: 200px;
   padding: 30px 0px 20px 0px;
-}
-@media screen and (min-width: 900px) {
-  header > img {
-    width: 200px;
-  }
 }
 
 body > div > nav {
