@@ -68,6 +68,8 @@
 
 }
 
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -79,7 +81,12 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  
+  >img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+
+  }
 }
 
 header {
@@ -87,11 +94,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 30px;
   width: 100%;
   box-shadow: 0 1px 10px 0px rgba(black, .2);
   > img {
     width: 200px;
     padding: 30px 0px 20px 0px;
+  }
+  >i {
+    position: absolute;
+    left: 30px;
   }
 }
 
@@ -138,21 +150,81 @@ body>div>nav {
       padding: 0px 40px 0px 40px;
       margin: 10px 0 20px 0;
     }
-    > .btn {
-      padding: 20px 30px;
-      margin: 20px;
-      background-color: $secondary-color;
-      color: white;
-      border: 0;
-      border-radius: 40px;
-      font-size: 18px;
-      box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
-  
-  
-    }
   }
 }
 
+body>div {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 10px 20px;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -50px;
+    background-color: $dark-bg-color;
+    .heading {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      * {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+      }
+    }
+    
+    .dishes-type {
+      &__heading {
+        > h2 {
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-bottom: 5px;
+        }
+        > div {
+          background-color: #5adebd;
+          width: 40px;
+          height: 3px;
+        }
+      }
+    }
+
+    .dishes-card {
+      margin: 20px 0;
+      background-color: white;
+      border-radius: 25px;
+      padding: 15px 20px;
+      box-shadow: 0 5px 30px 0px rgba(black, .08);
+
+
+      > h2 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+      }
+
+      &__infos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >h4 {
+          margin: 0;
+          font-weight: 400;
+          font-size: 14px;
+        }
+        >h3 {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .menu-bottom {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+  }
+}
 
 body>div>main {
   section.how-to {
@@ -266,10 +338,6 @@ body>div>main {
           height: 220px;
           object-fit: cover;
         }
-        >.restaurant-img-alt {
-          // object-position: 0px -200px;
-    
-        }
         .restaurant-card__infos {
           padding: 0px 25px;
           margin: 0;
@@ -312,6 +380,7 @@ body>div>main {
       }
     }
   }
+  
 }  
 
 footer {
