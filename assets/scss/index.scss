@@ -363,9 +363,27 @@ body>div>main {
               font-size: 20px;
             }
           }
-          .restaurant-card__like-btn {
-            margin: 1000px;
+          .fa-heart.fa-solid {
+            color: red;
+            position: relative;
           }
+
+          .heart-icon {
+            width: 40px;
+          }
+          .solid-heart-icon {
+            width: 40px;
+            fill: red;
+            // stroke: blue;
+            // stroke-width: 80px;
+            
+          }
+
+          .line-heart-icon {
+            width: 40px;
+            fill: black;
+          }
+
         }
         >p {
           position: absolute;

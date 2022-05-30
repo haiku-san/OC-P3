@@ -367,6 +367,12 @@ ul {
   box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
+.btn:hover {
+  cursor: pointer;
+  background-color: #fface8;
+  box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.6);
+}
+
 /**/
 /***********************************/
 /***********************************/
@@ -652,8 +658,20 @@ body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-ca
   font-weight: 400;
   font-size: 20px;
 }
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__like-btn {
-  margin: 1000px;
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .fa-heart.fa-solid {
+  color: red;
+  position: relative;
+}
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .heart-icon {
+  width: 40px;
+}
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .solid-heart-icon {
+  width: 40px;
+  fill: red;
+}
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .line-heart-icon {
+  width: 40px;
+  fill: black;
 }
 body > div > main .restaurants .restaurants_list .restaurant-card > p {
   position: absolute;

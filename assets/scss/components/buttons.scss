@@ -10,3 +10,9 @@
     box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
     
   }
+
+  .btn:hover {
+    cursor: pointer;
+    background-color: lighten($secondary-color, 10);
+    box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .6);
+  }
