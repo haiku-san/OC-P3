@@ -412,7 +412,7 @@ ul {
   z-index: 1;
   position: relative;
   width: 40px;
-  fill: black;
+  fill: red;
   cursor: pointer;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -754,9 +754,6 @@ footer ul li > p {
 
 .loading-spinner {
   z-index: 2;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50%;
   width: 80px;
   height: 80px;
   border: 5px solid #9356dc;
@@ -765,6 +762,9 @@ footer ul li > p {
   animation: rotation 1s 0.5s ease infinite;
   animation-iteration-count: 3;
   opacity: 0;
+  position: fixed;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
 }
 
 .main-wrapper {

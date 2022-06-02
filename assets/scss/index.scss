@@ -422,9 +422,9 @@ footer {
 
 .loading-spinner {
   z-index: 2;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50%;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-top: 50%;
   width: 80px;
   height: 80px;
   border: 5px solid rgba($primary-color, 1);
@@ -435,6 +435,9 @@ footer {
   animation: rotation 1s .5s ease infinite;
   animation-iteration-count: 3;
   opacity: 0;
+  position: fixed;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
 }
 
 .main-wrapper {
