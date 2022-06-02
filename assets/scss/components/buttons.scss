@@ -1,18 +1,49 @@
 /**/
 .btn {
-    padding: 20px 40px;
-    margin: 20px;
-    background-color: $secondary-color;
-    color: white;
-    border: 0;
+  z-index: 1;
+  position: relative;
+  padding: 20px 40px;
+  margin: 20px;
+  background-color: $secondary-color;
+  color: white;
+  border: 0;
+  border-radius: 40px;
+  font-size: 18px;
+  box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten($secondary-color, 15);
+    opacity: 0;
+    z-index: -1;
     border-radius: 40px;
-    font-size: 18px;
-    box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
-    
+    transition: opacity 120ms ease-in-out;
+    box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .5);
   }
+  &:hover {
+    &::after {
+      opacity: 1;
+    } 
+  }
+}
 
-  .btn:hover {
+.heart-icon {
+  width: 40px;
+  .solid-heart-icon {
+    z-index: 1;
+    position: relative;
+    width: 40px;
+    fill: black;
     cursor: pointer;
-    background-color: lighten($secondary-color, 10);
-    box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .6);
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
   }
+}

@@ -1,10 +1,28 @@
 /**/
 /**/
-/**/
-/**/
-/**/
-/**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0%, 99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**/
+/**/
+/**/
+/**/
 :root {
   font-family: "typography des contenus";
 }
@@ -357,6 +375,8 @@ ul {
 /**/
 /**/
 .btn {
+  z-index: 1;
+  position: relative;
   padding: 20px 40px;
   margin: 20px;
   background-color: #FF79DA;
@@ -365,12 +385,40 @@ ul {
   border-radius: 40px;
   font-size: 18px;
   box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc6ef;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 40px;
+  transition: opacity 120ms ease-in-out;
+  box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.btn:hover::after {
+  opacity: 1;
 }
 
-.btn:hover {
+.heart-icon {
+  width: 40px;
+}
+.heart-icon .solid-heart-icon {
+  z-index: 1;
+  position: relative;
+  width: 40px;
+  fill: black;
   cursor: pointer;
-  background-color: #fface8;
-  box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.heart-icon .solid-heart-icon:hover {
+  opacity: 1;
 }
 
 /**/
@@ -662,17 +710,6 @@ body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-ca
   color: red;
   position: relative;
 }
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .heart-icon {
-  width: 40px;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .solid-heart-icon {
-  width: 40px;
-  fill: red;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .line-heart-icon {
-  width: 40px;
-  fill: black;
-}
 body > div > main .restaurants .restaurants_list .restaurant-card > p {
   position: absolute;
   top: 5px;
@@ -713,6 +750,25 @@ footer ul li {
 footer ul li > p {
   padding: 0px 15px;
   margin: 0;
+}
+
+.loading-spinner {
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #9356dc;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s 0.5s ease infinite;
+  animation-iteration-count: 3;
+  opacity: 0;
+}
+
+.main-wrapper {
+  animation: loading 3.7s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

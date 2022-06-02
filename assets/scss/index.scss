@@ -368,21 +368,7 @@ body>div>main {
             position: relative;
           }
 
-          .heart-icon {
-            width: 40px;
-          }
-          .solid-heart-icon {
-            width: 40px;
-            fill: red;
-            // stroke: blue;
-            // stroke-width: 80px;
-            
-          }
-
-          .line-heart-icon {
-            width: 40px;
-            fill: black;
-          }
+       
 
         }
         >p {
@@ -432,4 +418,25 @@ footer {
     }
   }
   
+}
+
+.loading-spinner {
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+  width: 80px;
+  height: 80px;
+  border: 5px solid rgba($primary-color, 1);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  // display: inline-block;
+  // box-sizing: border-box;
+  animation: rotation 1s .5s ease infinite;
+  animation-iteration-count: 3;
+  opacity: 0;
+}
+
+.main-wrapper {
+  animation: loading 3.7s ease;
 }
