@@ -64,14 +64,6 @@
     background: linear-gradient(to top, #FF79DA 15%, #9356DC 95%, white 100%);
   }
 }
-@keyframes check {
-  0% {
-    right: -100px;
-  }
-  100% {
-    right: 0px;
-  }
-}
 /**/
 /**/
 /**/
@@ -613,24 +605,38 @@ body > div .menu .dishes-card {
   overflow: hidden;
 }
 body > div .menu .dishes-card .check-icon {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
-  background-color: green;
+  background-color: rgb(72, 198, 72);
   width: 70px;
   height: 70px;
   margin: 0;
   border-radius: 0 25px 25px 0;
-  transform-origin: 100% 50%;
-  right: -100px;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+}
+body > div .menu .dishes-card .check-icon > i {
+  margin-left: 40px;
+  transition: all 0.4s ease-in-out;
+  color: white;
+  transform: rotateZ(-2turn);
 }
 body > div .menu .dishes-card:hover > .check-icon {
-  display: flex;
-  right: 100px;
-  animation: check 1s linear forwards;
+  width: 20%;
+}
+body > div .menu .dishes-card:hover > .check-icon > i {
+  margin: 0;
+  transform: rotateZ(0);
+}
+body > div .menu .dishes-card:hover > .dishes-card__content {
+  width: 80%;
 }
 body > div .menu .dishes-card__content {
   width: 100%;
   padding: 15px 20px;
+  transition: width 0.4s ease-in-out;
 }
 body > div .menu .dishes-card__content > h2 {
   font-size: 16px;
@@ -645,6 +651,9 @@ body > div .menu .dishes-card__content > div > h4 {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body > div .menu .dishes-card__content > div > h3 {
   margin: 0;
