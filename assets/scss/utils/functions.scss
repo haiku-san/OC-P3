@@ -52,18 +52,28 @@
     background: linear-gradient(to top, $secondary-color 15%, $primary-color 35%, white 50%);   
   }
   60% {
-    background: linear-gradient(to top, $secondary-color 15%, $primary-color 45%, white 60%);
+    background: linear-gradient(to top, $secondary-color 15%, $primary-color 50%, white 60%);
   }
   70% {
-    background: linear-gradient(to top, $secondary-color 15%, $primary-color 55%, white 70%);   
+    background: linear-gradient(to top, $secondary-color 15%, $primary-color 60%, white 70%);   
   }
   80% {
-    background: linear-gradient(to top, $secondary-color 15%, $primary-color 65%, white 80%);
+    background: linear-gradient(to top, $secondary-color 15%, $primary-color 75%, white 80%);
   }
   90% {
-    background: linear-gradient(to top, $secondary-color 15%, $primary-color 75%, white 90%);
+    background: linear-gradient(to top, $secondary-color 15%, $primary-color 85%, white 90%);
   }
   100% {
-    background: linear-gradient(to top, $secondary-color 15%, $primary-color 85%, white 100%);
+    background: linear-gradient(to top, $secondary-color 15%, $primary-color 95%, white 100%);
+  }
+}
+
+@keyframes check {
+  0% {
+    right: -100px;
+  }
+
+  100% {
+    right: 0px;
   }
 }

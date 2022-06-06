@@ -200,34 +200,61 @@ body>div {
     }
 
     .dishes-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
       margin: 20px 0;
       background-color: white;
       border-radius: 25px;
-      padding: 15px 20px;
       box-shadow: 0 5px 30px 0px rgba(black, .08);
       animation: fade-in 1s;
-
-
-      > h2 {
-        font-size: 16px;
-        margin: 0 0 5px 0;
+      overflow: hidden;
+      .check-icon {
+        display: none;
+        z-index: 1;
+        background-color: green;
+        width: 70px;
+        height: 70px;
+        margin: 0;
+        border-radius: 0 25px 25px 0;
+        transform-origin: 100% 50%;
+        right: -100px;
       }
-
-      &__infos {
+      &:hover > .check-icon {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        >h4 {
-          margin: 0;
-          font-weight: 400;
-          font-size: 14px;
+        right: 100px;
+        animation: check 1s linear forwards;
+      }
+
+      &__content {
+        width: 100%;
+        padding: 15px 20px;
+
+        > h2 {
+          font-size: 16px;
+          margin: 0 0 5px 0;
         }
-        >h3 {
-          margin: 0;
-          font-size: 14px;
-          font-weight: 600;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          >h4 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 14px;
+          }
+          >h3 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+          }
         }
       }
+
+  
+
+
     }
   }
   .menu-bottom {
