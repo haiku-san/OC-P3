@@ -462,7 +462,238 @@ ul {
   animation: fill-in 0.4s linear forwards;
 }
 
+.restaurant-card {
+  position: relative;
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 30px;
+  width: 100%;
+  margin: 10px 0;
+}
+@media screen and (min-width: 900px) {
+  .restaurant-card {
+    width: 45%;
+  }
+}
+.restaurant-card > img {
+  position: relative;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 10px;
+  height: 220px;
+  object-fit: cover;
+}
+.restaurant-card .restaurant-card__infos {
+  padding: 0px 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.restaurant-card .restaurant-card__infos .restaurant-card__txt h2, .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
+  margin: 10px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 22px;
+}
+.restaurant-card .restaurant-card__infos .restaurant-card__txt h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.restaurant-card .restaurant-card__infos .fa-heart.fa-solid {
+  color: red;
+  position: relative;
+}
+.restaurant-card > p {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 10px;
+  font-weight: 600;
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
+}
+
+.explanations__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  background-color: #F6F6F6;
+  width: 90%;
+  height: 90px;
+  margin: 20px 0 0 -20px;
+  padding: 0;
+  border-radius: 30px;
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
+  font-size: 12px;
+}
+.explanations__card > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin-left: -15px;
+}
+.explanations__card > div * {
+  padding: 12px;
+  margin: 0;
+}
+.explanations__card i {
+  color: grey;
+}
+.explanations__card .number-bubble {
+  background-color: #9356DC;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  margin-right: 15px;
+}
+.explanations__card .number-bubble * {
+  margin: 0;
+  margin-top: -4px;
+  font-weight: 400;
+}
+.explanations__card.explanations__card--alt {
+  background-color: rgba(147, 86, 220, 0.15);
+}
+.explanations__card.explanations__card--alt i {
+  color: #9356dc;
+}
+
+.dishes-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.08);
+  animation: fade-in 1s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dishes-card .check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgb(72, 198, 72);
+  width: 70px;
+  height: 70px;
+  margin: 0;
+  border-radius: 0 25px 25px 0;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+}
+.dishes-card .check-icon > i {
+  margin-left: 40px;
+  transition: all 0.4s ease-in-out;
+  color: white;
+  transform: rotateZ(-2turn);
+}
+.dishes-card:hover > .check-icon {
+  width: 20%;
+}
+.dishes-card:hover > .check-icon > i {
+  margin: 0;
+  transform: rotateZ(0);
+}
+.dishes-card:hover > .dishes-card__content {
+  width: 80%;
+}
+.dishes-card__content {
+  width: 100%;
+  padding: 15px 20px;
+  transition: width 0.4s ease-in-out;
+}
+.dishes-card__content > h2 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+.dishes-card__content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dishes-card__content > div > h4 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dishes-card__content > div > h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 /**/
+header {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2);
+}
+header > img {
+  width: 200px;
+  padding: 30px 0px 20px 0px;
+}
+header > i {
+  position: absolute;
+  left: 30px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 40px;
+}
+footer > img {
+  filter: brightness(100);
+  width: 150px;
+}
+footer ul {
+  padding: 20px 0;
+  margin: 0;
+  line-height: 20px;
+  text-decoration: none;
+  color: white;
+}
+footer ul i {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 0;
+}
+footer ul li > p {
+  padding: 0px 15px;
+  margin: 0;
+}
+
 /***********************************/
 /***********************************/
 /***********************************/
@@ -488,68 +719,6 @@ body, html {
   width: 100%;
   object-fit: cover;
   height: 250px;
-}
-
-header {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  width: 100%;
-  box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2);
-}
-header > img {
-  width: 200px;
-  padding: 30px 0px 20px 0px;
-}
-header > i {
-  position: absolute;
-  left: 30px;
-}
-
-body > div > nav {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-body > div > nav * {
-  padding: 5px 8px;
-}
-body > div > nav div.place {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EAEAEA;
-  font-size: 12px;
-  color: rgb(43, 43, 43);
-  width: 100%;
-}
-body > div > nav div.presentation {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 40px;
-}
-body > div > nav div.presentation > h1 {
-  font-weight: 800;
-  font-size: 30px;
-  text-align: center;
-  padding: 0px 20px 0px 20px;
-  margin: 20px 0 10px 0;
-}
-body > div > nav div.presentation > h3 {
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  padding: 0px 40px 0px 40px;
-  margin: 10px 0 20px 0;
 }
 
 body > div .menu {
@@ -591,74 +760,6 @@ body > div .menu .dishes-type__heading > div {
   background-color: #5adebd;
   width: 40px;
   height: 3px;
-}
-body > div .menu .dishes-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  margin: 20px 0;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.08);
-  animation: fade-in 1s;
-  overflow: hidden;
-}
-body > div .menu .dishes-card .check-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  background-color: rgb(72, 198, 72);
-  width: 70px;
-  height: 70px;
-  margin: 0;
-  border-radius: 0 25px 25px 0;
-  width: 0;
-  transition: all 0.4s ease-in-out;
-}
-body > div .menu .dishes-card .check-icon > i {
-  margin-left: 40px;
-  transition: all 0.4s ease-in-out;
-  color: white;
-  transform: rotateZ(-2turn);
-}
-body > div .menu .dishes-card:hover > .check-icon {
-  width: 20%;
-}
-body > div .menu .dishes-card:hover > .check-icon > i {
-  margin: 0;
-  transform: rotateZ(0);
-}
-body > div .menu .dishes-card:hover > .dishes-card__content {
-  width: 80%;
-}
-body > div .menu .dishes-card__content {
-  width: 100%;
-  padding: 15px 20px;
-  transition: width 0.4s ease-in-out;
-}
-body > div .menu .dishes-card__content > h2 {
-  font-size: 16px;
-  margin: 0 0 5px 0;
-}
-body > div .menu .dishes-card__content > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-body > div .menu .dishes-card__content > div > h4 {
-  margin: 0;
-  font-weight: 400;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-body > div .menu .dishes-card__content > div > h3 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
 }
 body > div .menu-bottom {
   display: flex;
@@ -755,94 +856,6 @@ body > div > main .restaurants .restaurants_list {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-}
-body > div > main .restaurants .restaurants_list .restaurant-card {
-  position: relative;
-  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
-  border-radius: 30px;
-  width: 100%;
-  margin: 10px 0;
-}
-@media screen and (min-width: 900px) {
-  body > div > main .restaurants .restaurants_list .restaurant-card {
-    width: 45%;
-  }
-}
-body > div > main .restaurants .restaurants_list .restaurant-card > img {
-  position: relative;
-  width: 100%;
-  border-radius: 30px 30px 0 0;
-  margin-bottom: 10px;
-  height: 220px;
-  object-fit: cover;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos {
-  padding: 0px 25px;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2, body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
-  margin: 10px 0 10px 0;
-  display: flex;
-  flex-direction: column;
-  line-height: 22px;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h2 {
-  font-weight: 600;
-  font-size: 24px;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
-  font-weight: 400;
-  font-size: 20px;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .fa-heart.fa-solid {
-  color: red;
-  position: relative;
-}
-body > div > main .restaurants .restaurants_list .restaurant-card > p {
-  position: absolute;
-  top: 5px;
-  right: 20px;
-  color: #008766;
-  background-color: #99E2D0;
-  padding: 10px;
-  font-weight: 600;
-  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.18);
-}
-
-footer {
-  background-color: #353535;
-  padding: 40px;
-}
-footer > img {
-  filter: brightness(100);
-  width: 150px;
-}
-footer ul {
-  padding: 20px 0;
-  margin: 0;
-  line-height: 20px;
-  text-decoration: none;
-  color: white;
-}
-footer ul i {
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-footer ul li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 0;
-}
-footer ul li > p {
-  padding: 0px 15px;
-  margin: 0;
 }
 
 .loading-spinner {

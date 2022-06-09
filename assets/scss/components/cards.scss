@@ -1,0 +1,199 @@
+.restaurant-card {
+    position: relative;
+    box-shadow: 0 5px 30px 0px rgba(black, .18);
+    border-radius: 30px;
+    width: 100%;
+    margin: 10px 0;
+    @include desktop {
+      width: 45%;
+    }
+    >img {
+      position: relative;
+      width: 100%;
+      border-radius: 30px 30px 0 0;
+      margin-bottom: 10px;
+      height: 220px;
+      object-fit: cover;
+    }
+    .restaurant-card__infos {
+      padding: 0px 25px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .restaurant-card__txt {
+        h2, h3 {
+          margin: 10px 0 10px 0;
+          display: flex;
+          flex-direction: column;
+          line-height: 22px;
+        }
+        h2 {
+          font-weight: 600;
+          font-size: 24px;
+
+        }
+        h3 {
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+      .fa-heart.fa-solid {
+        color: red;
+        position: relative;
+      }
+
+   
+
+    }
+    >p {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      color: #008766;
+      background-color: #99E2D0;
+      padding: 10px;
+      font-weight: 600;
+      box-shadow: 0 5px 30px 0px rgba(black, .18);
+    }
+  }
+
+.explanations__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    background-color: $light-bg-color;
+    width: 90%;
+    height: 90px;
+    margin: 20px 0 0 -20px;
+    padding: 0;
+    border-radius: 30px;
+    box-shadow: 0 5px 30px 0px rgba(black, .18);
+    font-size: 12px;
+    
+    >div {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0;
+      margin-left: -15px;
+      
+      * {
+        padding: 12px;
+        margin: 0;
+  
+      }
+    }
+    i {
+      color: grey;
+    }
+    .number-bubble {
+      background-color: $primary-color;
+      padding: 0px;
+      margin: 0;
+      text-align: center;
+      color: white;
+      border-radius: 100px;
+      width: 35px;
+      height: 35px;
+      font-size: 15px;
+      margin-right: 15px;
+      * {
+        margin: 0;
+        margin-top: -4px;
+        font-weight: 400;
+  
+      }
+    }
+    &.explanations__card--alt {
+      background-color: rgba($primary-color, .15);
+      i {
+        color: rgba($primary-color, 1);
+      }
+    }
+    
+  
+  }
+
+.dishes-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 30px 0px rgba(black, .08);
+    animation: fade-in 1s;
+    overflow: hidden;
+    cursor: pointer;
+    .check-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      background-color: rgb(72, 198, 72);
+      width: 70px;
+      height: 70px;
+      margin: 0;
+      border-radius: 0 25px 25px 0;
+      width: 0;
+      transition: all .4s ease-in-out;
+      > i {
+        margin-left: 40px;
+        transition: all .4s ease-in-out;
+        color: white;
+        transform: rotateZ(-2turn);
+      }
+    }
+    &:hover > .check-icon {
+      width: 20%;
+      > i {
+        margin: 0;
+        transform: rotateZ(0);
+
+      }
+    }
+    &:hover > .dishes-card__content {
+      width: 80%;
+    }
+
+    &__content {
+      width: 100%;
+      padding: 15px 20px;
+      transition: width .4s ease-in-out;
+   
+      > h2 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+      }
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        >h4 {
+          margin: 0;
+          font-weight: 400;
+          font-size: 14px;
+          white-space: nowrap; 
+          overflow: hidden;
+          text-overflow: ellipsis; 
+        }
+        >h3 {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+
+
+
+
+  }

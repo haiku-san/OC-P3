@@ -81,6 +81,8 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
+  // animation: loading 3.7s ease;
+
   >img {
     width: 100%;
     object-fit: cover;
@@ -89,69 +91,9 @@ body, html {
   }
 }
 
-header {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  width: 100%;
-  box-shadow: 0 1px 10px 0px rgba(black, .2);
-  > img {
-    width: 200px;
-    padding: 30px 0px 20px 0px;
-  }
-  >i {
-    position: absolute;
-    left: 30px;
-  }
-}
 
-body>div>nav {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  * {
-    padding: 5px 8px;
-  }
-  div.place {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $dark-bg-color;
-    font-size: 12px;
-    color: rgb(43, 43, 43);
-    width: 100%;
-  
-    }
-  
-  div.presentation {
-    background-color: $light-bg-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 40px;
-    > h1 {
-      font-weight: 800;
-      font-size: 30px;
-      text-align: center;
-      padding: 0px 20px 0px 20px;
-      margin: 20px 0 10px 0;
-    }
-    > h3 {
-      font-weight: 300;
-      font-size: 20px;
-      text-align: center;
-      padding: 0px 40px 0px 40px;
-      margin: 10px 0 20px 0;
-    }
-  }
-}
+
+
 
 body>div {
   .menu {
@@ -199,82 +141,7 @@ body>div {
       }
     }
 
-    .dishes-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 70px;
-      margin: 20px 0;
-      background-color: white;
-      border-radius: 25px;
-      box-shadow: 0 5px 30px 0px rgba(black, .08);
-      animation: fade-in 1s;
-      overflow: hidden;
-      .check-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        background-color: rgb(72, 198, 72);
-        width: 70px;
-        height: 70px;
-        margin: 0;
-        border-radius: 0 25px 25px 0;
-        width: 0;
-        transition: all .4s ease-in-out;
-        > i {
-          margin-left: 40px;
-          transition: all .4s ease-in-out;
-          color: white;
-          transform: rotateZ(-2turn);
-        }
-      }
-      &:hover > .check-icon {
-        width: 20%;
-        > i {
-          margin: 0;
-          transform: rotateZ(0);
-
-        }
-      }
-      &:hover > .dishes-card__content {
-        width: 80%;
-      }
-
-      &__content {
-        width: 100%;
-        padding: 15px 20px;
-        transition: width .4s ease-in-out;
-     
-        > h2 {
-          font-size: 16px;
-          margin: 0 0 5px 0;
-        }
-        > div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-         
-          >h4 {
-            margin: 0;
-            font-weight: 400;
-            font-size: 14px;
-            white-space: nowrap; 
-            overflow: hidden;
-            text-overflow: ellipsis; 
-          }
-          >h3 {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 600;
-          }
-        }
-      }
-
-  
-
-
-    }
+    
   }
   .menu-bottom {
     display: flex;
@@ -378,104 +245,13 @@ body>div>main {
         justify-content: space-around;
     
       }
-      .restaurant-card {
-        position: relative;
-        box-shadow: 0 5px 30px 0px rgba(black, .18);
-        border-radius: 30px;
-        width: 100%;
-        margin: 10px 0;
-        @include desktop {
-          width: 45%;
-        }
-        >img {
-          position: relative;
-          width: 100%;
-          border-radius: 30px 30px 0 0;
-          margin-bottom: 10px;
-          height: 220px;
-          object-fit: cover;
-        }
-        .restaurant-card__infos {
-          padding: 0px 25px;
-          margin: 0;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          .restaurant-card__txt {
-            h2, h3 {
-              margin: 10px 0 10px 0;
-              display: flex;
-              flex-direction: column;
-              line-height: 22px;
-            }
-            h2 {
-              font-weight: 600;
-              font-size: 24px;
-    
-            }
-            h3 {
-              font-weight: 400;
-              font-size: 20px;
-            }
-          }
-          .fa-heart.fa-solid {
-            color: red;
-            position: relative;
-          }
-
-       
-
-        }
-        >p {
-          position: absolute;
-          top: 5px;
-          right: 20px;
-          color: #008766;
-          background-color: #99E2D0;
-          padding: 10px;
-          font-weight: 600;
-          box-shadow: 0 5px 30px 0px rgba(black, .18);
-        }
-      }
+      
     }
   }
   
 }  
 
-footer {
-  background-color: $footer-bg-color;
-  padding: 40px;
 
-  >img {
-    filter: brightness(100);
-    width: 150px;
-  }
-  ul {
-    padding: 20px 0;
-    margin: 0;
-    line-height: 20px;
-    text-decoration: none;
-    color: white;
-    i {
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 5px 0;
-      >p {
-        padding: 0px 15px;
-        margin: 0;
-      }
-    }
-  }
-  
-}
 
 .loading-spinner {
   z-index: 2;
@@ -491,8 +267,3 @@ footer {
   left: calc(50% - 40px);
   top: calc(50% - 40px);
 }
-
-.main-wrapper {
-  // animation: loading 3.7s ease;
-}
-
