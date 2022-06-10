@@ -4,6 +4,14 @@
     border-radius: 30px;
     width: 100%;
     margin: 10px 0;
+    &:hover {
+      > img {
+        opacity: .8;
+      }
+      opacity: .8;
+      cursor: pointer;
+    }
+
     @include desktop {
       width: 45%;
     }
@@ -23,6 +31,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
+      
       .restaurant-card__txt {
         h2, h3 {
           margin: 10px 0 10px 0;
@@ -44,7 +53,7 @@
         color: red;
         position: relative;
       }
-
+      
    
 
     }
@@ -79,7 +88,7 @@
       justify-content: center;
       align-items: center;
       z-index: 1;
-      background-color: rgb(72, 198, 72);
+      background-color: $mint-green;
       width: 70px;
       height: 70px;
       margin: 0;
@@ -94,7 +103,7 @@
       }
     }
     &:hover > .check-icon {
-      width: 20%;
+      width: 15%;
       > i {
         margin: 0;
         transform: rotateZ(0);
@@ -102,7 +111,7 @@
       }
     }
     &:hover > .dishes-card__content {
-      width: 80%;
+      width: 85%;
     }
 
     &__content {
