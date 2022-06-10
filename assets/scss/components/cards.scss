@@ -42,6 +42,9 @@
         h2 {
           font-weight: 600;
           font-size: 24px;
+          &:hover {
+            color: $primary-color;
+          }
 
         }
         h3 {
@@ -80,7 +83,7 @@
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 5px 30px 0px rgba(black, .08);
-    animation: fade-in 1s;
+    animation: fade-in 1s 3.6s linear;
     overflow: hidden;
     cursor: pointer;
     .check-icon {

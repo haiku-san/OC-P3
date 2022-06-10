@@ -417,6 +417,17 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: none;
+}
+a:active {
+  color: none;
+}
+a:visited {
+  color: black;
+}
+
 /**/
 /**/
 .btn {
@@ -508,6 +519,9 @@ ul {
   font-weight: 600;
   font-size: 24px;
 }
+.restaurant-card .restaurant-card__infos .restaurant-card__txt h2:hover {
+  color: #9356DC;
+}
 .restaurant-card .restaurant-card__infos .restaurant-card__txt h3 {
   font-weight: 400;
   font-size: 20px;
@@ -536,7 +550,7 @@ ul {
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.08);
-  animation: fade-in 1s;
+  animation: fade-in 1s 3.6s linear;
   overflow: hidden;
   cursor: pointer;
 }
@@ -673,6 +687,7 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
+  animation: loading 3.7s ease;
 }
 .main-wrapper > img {
   width: 100%;

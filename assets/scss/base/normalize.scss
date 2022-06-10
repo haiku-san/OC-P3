@@ -353,3 +353,14 @@
   * TOUS LES ELEMENTS QUE JE NORMALISE A MA SAUCE   :)
   */
   ul{list-style:none;}
+
+  a {
+    text-decoration: none;
+    color: none;
+    &:active {
+      color: none;
+    } 
+    &:visited {
+      color: black;
+    }
+  }
