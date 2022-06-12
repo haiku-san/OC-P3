@@ -81,7 +81,7 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  animation: loading 3.7s ease;
+  // animation: loading 3.7s ease;
 
   >img {
     width: 100%;
@@ -121,14 +121,14 @@ body>div>nav {
     align-items: center;
     width: 100%;
     padding: 40px;
-    > h1 {
+    > h1.presentation__title {
       font-weight: 800;
       font-size: 30px;
       text-align: center;
       padding: 0px 20px 0px 20px;
       margin: 20px 0 10px 0;
     }
-    > h3 {
+    > h3.presentation__subtitle {
       font-weight: 300;
       font-size: 20px;
       text-align: center;
@@ -140,7 +140,7 @@ body>div>nav {
 
 
 body>div {
-  .menu {
+  .restaurant-menu {
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -150,7 +150,7 @@ body>div {
     background-color: $dark-bg-color;
     @include desktop {
       padding: 20px 40px;
-      .menu-list {
+      .restaurant-menu__list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -159,7 +159,7 @@ body>div {
         }
       }
     }
-    .heading {
+    &__heading {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -189,13 +189,13 @@ body>div {
       }
     }
 
-    
-  }
-  .menu-bottom {
+  &__bottom {
     display: flex;
     justify-content: center;
     padding-bottom: 80px;
+  }  
   }
+  
 }
 
 body>div>main {
@@ -204,16 +204,16 @@ body>div>main {
     flex-direction: column;
     width: 100%;
     padding: 20px 0 60px 0;
-    >h1 {
+    >h1.how-to__title {
       padding: 20px 0 0 30px;
       margin-bottom: 0;
     }
-    .explanations {
+    .explanations-list {
       display: flex;
       flex-direction: column;
       align-items: stretch;
       width: 100%;
-      .explanations__card {
+      .explanations-list__card {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -228,7 +228,7 @@ body>div>main {
         box-shadow: 0 5px 30px 0px rgba(black, .18);
         font-size: 12px;
         
-        >div {
+        >div.explanations-card-content {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
@@ -241,29 +241,30 @@ body>div>main {
             margin: 0;
       
           }
-        }
-        i {
-          color: grey;
-        }
-        .number-bubble {
-          background-color: $primary-color;
-          padding: 0px;
-          margin: 0;
-          text-align: center;
-          color: white;
-          border-radius: 100px;
-          width: 35px;
-          height: 35px;
-          font-size: 15px;
-          margin-right: 15px;
-          * {
+          i.explanations-card-content__icon {
+            color: grey;
+          }
+          .explanations-card-content__number {
+            background-color: $primary-color;
+            padding: 0px;
             margin: 0;
-            margin-top: -4px;
-            font-weight: 400;
-      
+            text-align: center;
+            color: white;
+            border-radius: 100px;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+            margin-right: 15px;
+            * {
+              margin: 0;
+              margin-top: -4px;
+              font-weight: 400;
+        
+            }
           }
         }
-        &.explanations__card--alt {
+        
+        &.explanations-list__card--alt-color {
           background-color: rgba($primary-color, .15);
           i {
             color: rgba($primary-color, 1);
@@ -275,13 +276,13 @@ body>div>main {
     
     }
   } 
-  .restaurants {
+  .restaurants-section {
     background-color: $light-bg-color;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 60px 30px;
-    .restaurants_list {
+    .restaurants-section__list {
       display: flex;
       flex-direction: column;
       align-items: center;

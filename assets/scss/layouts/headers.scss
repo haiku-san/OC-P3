@@ -7,12 +7,12 @@ header {
     padding: 0 30px;
     width: 100%;
     box-shadow: 0 1px 10px 0px rgba(black, .2);
-    > img {
+    .header__logo {
       width: 200px;
       padding: 30px 0px 20px 0px;
     }
     > a {
-      > i {
+      .header__return-button {
         position: absolute;
         left: 30px;
         cursor: pointer;
@@ -22,5 +22,5 @@ header {
           transform: scale(1.2);
       }
     }
-    }
   }
+}
