@@ -81,79 +81,72 @@
 
 
 .dishes-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 30px 0px rgba(black, .08);
+  animation: fade-in 1s 3.6s linear;
+  overflow: hidden;
+  cursor: pointer;
+  &__checked {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    z-index: 1;
+    background-color: $mint-green;
+    width: 70px;
     height: 70px;
-    margin: 20px 0;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 0 5px 30px 0px rgba(black, .08);
-    animation: fade-in 1s 3.6s linear;
-    overflow: hidden;
-    cursor: pointer;
-    .check-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      background-color: $mint-green;
-      width: 70px;
-      height: 70px;
-      margin: 0;
-      border-radius: 0 25px 25px 0;
-      width: 0;
+    margin: 0;
+    border-radius: 0 25px 25px 0;
+    width: 0;
+    transition: all .4s ease-in-out;
+    .dishes-card__checked-icon {
+      margin-left: 40px;
       transition: all .4s ease-in-out;
-      > i {
-        margin-left: 40px;
-        transition: all .4s ease-in-out;
-        color: white;
-        transform: rotateZ(-2turn);
-      }
+      color: white;
+      transform: rotateZ(-2turn);
     }
-    &:hover > .check-icon {
-      width: 15%;
-      > i {
-        margin: 0;
-        transform: rotateZ(0);
-
-      }
-    }
-    &:hover > .dishes-card__content {
-      width: 85%;
-    }
-
-    &__content {
-      width: 100%;
-      padding: 15px 20px;
-      transition: width .4s ease-in-out;
-   
-      > h2 {
-        font-size: 16px;
-        margin: 0 0 5px 0;
-      }
-      > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
-        >h4 {
-          margin: 0;
-          font-weight: 400;
-          font-size: 14px;
-          white-space: nowrap; 
-          overflow: hidden;
-          text-overflow: ellipsis; 
-        }
-        >h3 {
-          margin: 0;
-          font-size: 14px;
-          font-weight: 600;
-        }
-      }
-    }
-
-
-
-
   }
+  &:hover > .dishes-card__checked {
+    width: 15%;
+    > i {
+      margin: 0;
+      transform: rotateZ(0);
+   }
+  }
+  &:hover > .dishes-card__content {
+    width: 85%;
+  }
+ &__content {
+    width: 100%;
+    padding: 15px 20px;
+    transition: width .4s ease-in-out;
+      > h2 {
+      font-size: 16px;
+      margin: 0 0 5px 0;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      >h4 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+      }
+      >h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+ }

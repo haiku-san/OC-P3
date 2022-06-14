@@ -1,26 +1,90 @@
 /**/
-header {
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-    width: 100%;
-    box-shadow: 0 1px 10px 0px rgba(black, .2);
-    .header__logo {
-      width: 200px;
-      padding: 30px 0px 20px 0px;
-    }
-    > a {
-      .header__return-button {
-        position: absolute;
-        left: 30px;
-        cursor: pointer;
-        transition: transform ease-in-out 50ms;
-        &:hover {
-          opacity: .6;
-          transform: scale(1.2);
+// header {
+//     z-index: 2;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 0 30px;
+//     width: 100%;
+//     box-shadow: 0 1px 10px 0px rgba(black, .2);
+//     .header__logo {
+//       width: 200px;
+//       padding: 30px 0px 20px 0px;
+//     }
+//     > a {
+//       .header__return-button {
+//         position: absolute;
+//         left: 30px;
+//         cursor: pointer;
+//         transition: transform ease-in-out 50ms;
+//         &:hover {
+//           opacity: .6;
+//           transform: scale(1.2);
+//       }
+//     }
+//   }
+// }
+
+%header{
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo{}
+  &__return-button{
+    > i {
+      position: absolute;
+      cursor: pointer;
+      &:hover {
+        color:red;
+        background: purple;
       }
     }
   }
+}
+$header: (
+  p:0 30px,w:100%,bs:0 1px 10px 0px rgba(black, .2),
+  l_p:30px 0px 20px 0px,l_w:200px,
+  b_l:30px,  b_t:50ms,  b_Ho:.6,  b_Ht:scale(1.2)
+);
+
+@mixin header(
+  $p:map-get($header,p),$w:map-get($header,w),$bs:map-get($header,bs),
+  $l_p:map-get($header,l_p),$l_w:map-get($header,l_w),
+  $b_l:map-get($header,b_l),  $b_t:map-get($header,b_t),  $b_Ho:map-get($header,b_Ho),  $b_Ht:map-get($header,b_Ht)
+){
+  @extend %header;
+  padding: $p;
+  width: $w;
+  box-shadow: $bs;
+
+  &__logo {
+    @extend %header__logo;
+    width: $l_w;
+    padding: $l_p;
+  }
+
+  &__return-button {
+    @extend %header__return-button;
+    > i {
+      left: $b_l;
+      transition: transform ease-in-out $b_t;
+      &:hover {
+        opacity: $b_Ho;
+        transform: $b_Ht;
+      }
+    }
+  }
+}
+@function header(){
+
+} 
+
+
+.header {
+  @include header();
+}
+
+.header--bsBlue{
+  @include header($bs:0 0 1em 1px blue);
 }

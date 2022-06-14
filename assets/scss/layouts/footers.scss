@@ -1,32 +1,96 @@
-.footer {
-  padding: 40px;
+// .footer {
+//   padding: 40px;
+//   background-color: $footer-bg-color;
+//   &__logo {
+//     filter: brightness(100);
+//     width: 150px;
+//   }
+//   .footer-list {
+//     padding: 20px 0;
+//     margin: 0;
+//     line-height: 20px;
+//     text-decoration: none;
+//     color: white;
+//     &__icon {
+//       color: white;
+//       margin: 0;
+//       padding: 0;
+//     }
+//     &__link {
+//       display: flex;
+//       flex-direction: row;
+//       align-items: center;
+//       padding: 5px 0;
+//       >p {
+//         padding: 0px 15px;
+//         margin: 0;
+//       }
+//     }
+//   }
   
-  background-color: $footer-bg-color;
-  &__logo {
-    filter: brightness(100);
-    width: 150px;
-  }
-  .footer-list {
-    padding: 20px 0;
-    margin: 0;
-    line-height: 20px;
+// }
+
+%footer {  
+  &-list {
     text-decoration: none;
-    color: white;
-    &__icon {
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
     &__link {
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 5px 0;
-      >p {
-        padding: 0px 15px;
-        margin: 0;
+    }
+  }
+}
+
+$footer: (
+  p: 40px, bg-color: $footer-bg-color,
+  logo-b: brightness(100), logo-w: 150px,
+  list-p: 20px 0, list-m: 0, list-lh: 20px, list-c: white,
+  icon-c: white, icon-m: 0, icon-p: 0,
+  link-p: 5px 0,
+  p-p: 0px 15px, p-m: 0,
+);
+
+@mixin footer(
+  $p:map-get($footer, p), $bg-color:map-get($footer, bg-color),
+  $logo-b:map-get($footer, logo-b), $logo-w:map-get($footer, logo-w),
+  $list-p:map-get($footer, list-p), $list-m:map-get($footer, list-m), $list-lh:map-get($footer, list-lh), $list-c:map-get($footer, list-c),
+  $icon-c:map-get($footer, icon-c), $icon-m:map-get($footer, icon-m), $icon-p:map-get($footer, icon-p),
+  $link-p:map-get($footer, link-p),
+  $p-p:map-get($footer, p-p), $p-m:map-get($footer, p-m),
+){
+  @extend %footer;
+  padding: $p;
+  background-color: $bg-color;
+
+  &__logo {
+    filter: $logo-b;
+    width: $logo-w;
+  }
+
+  &-list {
+    @extend %footer-list;
+    padding: $list-p;
+    margin: $list-m;
+    line-height: $list-lh;
+    color: $list-c;
+    
+    &__icon {
+      color: $icon-c;
+      margin: $icon-m;
+      padding: $icon-p;
+    }
+    &__link {
+      @extend %footer-list__link;
+      padding: $link-p;
+      p {
+        padding: $p-p;
+        margin: $p-m;
       }
     }
   }
   
-  }
+}
+
+.footer {
+  @include footer;
+}
