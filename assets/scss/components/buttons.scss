@@ -67,6 +67,9 @@ $btn: (
   background-color: $b-c;
   border-radius: $b-r;
   font-size: $f-s;
+  &:visited {
+    color: $c;
+  }
   &::after {
     background-color: $b-c2;
     opacity: $o;

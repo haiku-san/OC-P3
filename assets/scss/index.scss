@@ -81,7 +81,7 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  // animation: loading 3.7s ease;
+  animation: loading 3.7s ease;
 
   >img {
     width: 100%;
@@ -300,48 +300,3 @@ body>div>main {
   
 }  
 
-
-
-// .loading-spinner {
-//   z-index: 2;
-//   width: 80px;
-//   height: 80px;
-//   border: 5px solid rgba($primary-color, 1);
-//   border-bottom-color: transparent;
-//   border-radius: 50%;
-//   animation: rotation 1s .5s ease infinite;
-//   animation-iteration-count: 3;
-//   opacity: 0;
-//   position: fixed;
-//   left: calc(50% - 40px);
-//   top: calc(50% - 40px);
-// }
-
-%loading-spinner {
-  z-index: 2;
-  animation: rotation 1s .5s ease infinite;
-  animation-iteration-count: 3;
-  position: fixed;
-  left: calc(50% - 40px);
-  top: calc(50% - 40px);
-}
-
-$loading: (
-  w: 80px, h: 80px, b: 5px solid rgba($primary-color, 1), b-bottom-color: transparent, b-r: 50%, o: 0,
-);
-
-@mixin loading-spinner(
-  $w: map-get($loading, w), $h: map-get($loading, h), $b: map-get($loading, b), $b-bottom-color: map-get($loading, b-bottom-color), $b-r: map-get($loading, b-r), $o: map-get($loading, o), 
-){
-  @extend %loading-spinner;
-  width: $w;
-  height: $h;
-  border: $b;
-  border-bottom-color: $b-bottom-color;
-  border-radius: $b-r;
-  opacity: $o;
-}
-
-.loading-spinner {
-  @include loading-spinner
-}
