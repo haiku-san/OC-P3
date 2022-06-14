@@ -433,15 +433,8 @@ a:visited {
 .btn {
   z-index: 1;
   position: relative;
-  padding: 20px 40px;
-  margin: 20px;
-  background-color: #FF79DA;
-  color: white;
-  border: 0;
-  border-radius: 40px;
-  font-size: 18px;
-  box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
 .btn::after {
   content: "";
@@ -450,12 +443,24 @@ a:visited {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #ffc6ef;
-  opacity: 0;
   z-index: -1;
-  border-radius: 40px;
   transition: opacity 120ms ease-in-out;
   box-shadow: inset -20px -30px 70px 0px #9356dc, 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  padding: 20px 40px;
+  margin: 20px;
+  color: white;
+  border: 0;
+  background-color: #FF79DA;
+  border-radius: 40px;
+  font-size: 18px;
+}
+.btn::after {
+  background-color: #ffc6ef;
+  opacity: 0;
+  border-radius: 40px;
 }
 .btn:hover::after {
   opacity: 1;

@@ -1,16 +1,43 @@
 /**/
-.btn {
+// .btn {
+//   z-index: 1;
+//   position: relative;
+//   padding: 20px 40px;
+//   margin: 20px;
+//   background-color: $secondary-color;
+//   color: white;
+//   border: 0;
+//   border-radius: 40px;
+//   font-size: 18px;
+//   box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
+//   cursor: pointer;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: lighten($secondary-color, 15);
+//     opacity: 0;
+//     z-index: -1;
+//     border-radius: 40px;
+//     transition: opacity 120ms ease-in-out;
+//     box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .5);
+//   }
+//   &:hover {
+//     &::after {
+//       opacity: 1;
+//     } 
+//   }
+// }
+
+%btn {
   z-index: 1;
   position: relative;
-  padding: 20px 40px;
-  margin: 20px;
-  background-color: $secondary-color;
-  color: white;
-  border: 0;
-  border-radius: 40px;
-  font-size: 18px;
-  box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
   cursor: pointer;
+  box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .4);
+  
   &::after {
     content: "";
     position: absolute;
@@ -18,18 +45,43 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: lighten($secondary-color, 15);
-    opacity: 0;
     z-index: -1;
-    border-radius: 40px;
     transition: opacity 120ms ease-in-out;
     box-shadow: inset -20px -30px 70px 0px rgba($primary-color, 1), 0 5px 20px 0px rgba(black, .5);
+
+  }
+}
+
+$btn: (
+  p: 20px 40px, m: 20px, c: white, b: 0, b-c:$secondary-color, b-r: 40px, f-s: 18px, b-c2: lighten($secondary-color, 15), o: 0, b-r2: 40px, o2: 1,
+);
+
+@mixin btn(
+  $p: map-get($btn, p), $m: map-get($btn, m), $c: map-get($btn, c), $b: map-get($btn, b),$b-c: map-get($btn, b-c), $b-r: map-get($btn, b-r), $f-s: map-get($btn, f-s), $b-c2: map-get($btn, b-c2), $o: map-get($btn, o), $b-r2: map-get($btn, b-r2), $o2: map-get($btn, o2), 
+){
+  @extend %btn;
+  padding: $p;
+  margin: $m;
+  color: $c;
+  border: $b;
+  background-color: $b-c;
+  border-radius: $b-r;
+  font-size: $f-s;
+  &::after {
+    background-color: $b-c2;
+    opacity: $o;
+    border-radius: $b-r2;
   }
   &:hover {
     &::after {
-      opacity: 1;
+      opacity: $o2;
     } 
   }
+}
+
+
+.btn {
+  @include btn;
 }
 
 // .heart-icon {
