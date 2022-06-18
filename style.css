@@ -1,16 +1,6 @@
 /**/
 /**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@-webkit-keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 1;
-  }
-}
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -18,14 +8,6 @@
   }
   100% {
     transform: rotate(360deg);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes loading {
-  0%, 99% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }
@@ -37,16 +19,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translate(0, 10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -55,41 +27,6 @@
   100% {
     opacity: 1;
     transform: translate(0, 0);
-  }
-}
-@-webkit-keyframes fill-in {
-  0% {
-    background: linear-gradient(to top, #FF79DA 0%, #9356DC 0%, white 5%);
-  }
-  10% {
-    background: linear-gradient(to top, #FF79DA 5%, #9356DC 0%, white 10%);
-  }
-  20% {
-    background: linear-gradient(to top, #FF79DA 10%, #9356DC 0%, white 15%);
-  }
-  30% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 15%, white 20%);
-  }
-  40% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 25%, white 50%);
-  }
-  50% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 35%, white 50%);
-  }
-  60% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 50%, white 60%);
-  }
-  70% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 60%, white 70%);
-  }
-  80% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 75%, white 80%);
-  }
-  90% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 85%, white 90%);
-  }
-  100% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 95%, white 100%);
   }
 }
 @keyframes fill-in {
@@ -218,8 +155,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -534,16 +470,15 @@ a:visited {
 }
 
 .restaurant-card__heart-icon {
-  -webkit-clip-path: path("M21.45,3.68l.98,1.05,1.05-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51-.08,0,0,0,0,0h0Zm.98,7.02l-3.96-4.11c-1.91-1.83-4.61-2.7-7.28-2.26-4.02,.67-6.97,4.15-6.97,8.23v.51c0,2.48,1.03,4.85,2.84,6.54l15.44,14.41,15.44-14.41c1.81-1.69,2.84-4.06,2.84-6.54v-.51c0-4.08-2.95-7.56-6.97-8.23-2.66-.44-5.37,.43-7.28,2.26l-4.11,4.11Z");
+  clip-path: path("M21.45,3.68l.98,1.05,1.05-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51-.08,0,0,0,0,0h0Zm.98,7.02l-3.96-4.11c-1.91-1.83-4.61-2.7-7.28-2.26-4.02,.67-6.97,4.15-6.97,8.23v.51c0,2.48,1.03,4.85,2.84,6.54l15.44,14.41,15.44-14.41c1.81-1.69,2.84-4.06,2.84-6.54v-.51c0-4.08-2.95-7.56-6.97-8.23-2.66-.44-5.37,.43-7.28,2.26l-4.11,4.11Z");
   width: 45px;
   height: 45px;
   background-color: black;
   cursor: pointer;
 }
 .restaurant-card__heart-icon:hover {
-  -webkit-clip-path: path("M0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51l1.05,1.05,.98-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07h0Z");
-  -webkit-animation: fill-in 0.4s linear forwards;
-          animation: fill-in 0.4s linear forwards;
+  clip-path: path("M0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51l1.05,1.05,.98-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07h0Z");
+  animation: fill-in 0.4s linear forwards;
 }
 
 .restaurant-card {
@@ -571,8 +506,7 @@ a:visited {
   border-radius: 30px 30px 0 0;
   margin-bottom: 10px;
   height: 220px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .restaurant-card__content {
   padding: 0px 25px;
@@ -632,8 +566,7 @@ a:visited {
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.08);
-  -webkit-animation: fade-in 1s 3.6s linear;
-          animation: fade-in 1s 3.6s linear;
+  animation: fade-in 1s 3.6s linear;
   overflow: hidden;
   cursor: pointer;
 }
@@ -696,10 +629,8 @@ a:visited {
 
 .loading-spinner {
   z-index: -1;
-  -webkit-animation: rotation 1s 0.5s ease infinite;
-          animation: rotation 1s 0.5s ease infinite;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
+  animation: rotation 1s 0.5s ease infinite;
+  animation-iteration-count: 3;
   position: fixed;
   left: calc(50% - 40px);
   top: calc(50% - 40px);
@@ -780,8 +711,7 @@ a:visited {
   background-color: #353535;
 }
 .footer__logo {
-  -webkit-filter: brightness(100);
-          filter: brightness(100);
+  filter: brightness(100);
   width: 150px;
 }
 .footer-list {
@@ -826,13 +756,11 @@ body, html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  -webkit-animation: loading 3.7s ease;
-          animation: loading 3.7s ease;
+  animation: loading 3.7s ease;
 }
 .main-wrapper > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 250px;
 }
 
@@ -883,7 +811,7 @@ body > div > nav div.presentation > h3.presentation__subtitle {
 body > div .restaurant-menu {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+  align-items: center;
   padding: 10px 20px;
   border-radius: 50px 50px 0px 0px;
   margin-top: -50px;
@@ -1022,3 +950,5 @@ body > div > main .restaurants-section .restaurants-section__list {
     justify-content: space-around;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
