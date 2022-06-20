@@ -469,14 +469,14 @@ a:visited {
   opacity: 1;
 }
 
-.restaurant-card__heart-icon {
+.restaurant-card__heart-icon, .restaurant-menu__heart-icon {
   clip-path: path("M21.45,3.68l.98,1.05,1.05-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51-.08,0,0,0,0,0h0Zm.98,7.02l-3.96-4.11c-1.91-1.83-4.61-2.7-7.28-2.26-4.02,.67-6.97,4.15-6.97,8.23v.51c0,2.48,1.03,4.85,2.84,6.54l15.44,14.41,15.44-14.41c1.81-1.69,2.84-4.06,2.84-6.54v-.51c0-4.08-2.95-7.56-6.97-8.23-2.66-.44-5.37,.43-7.28,2.26l-4.11,4.11Z");
   width: 45px;
   height: 45px;
   background-color: black;
   cursor: pointer;
 }
-.restaurant-card__heart-icon:hover {
+.restaurant-card__heart-icon:hover, .restaurant-menu__heart-icon:hover {
   clip-path: path("M0,13.07v-.51C0,6.42,4.44,1.18,10.49,.17c3.93-.67,8.09,.64,10.95,3.51l1.05,1.05,.98-1.05C26.42,.81,30.5-.5,34.51,.17c6.06,1.01,10.49,6.25,10.49,12.39v.51c0,3.65-1.51,7.14-4.18,9.62l-15.88,14.83c-.66,.62-1.53,.96-2.43,.96s-1.78-.34-2.43-.96L4.18,22.7C1.51,20.21,0,16.72,0,13.07h0Z");
   animation: fill-in 0.4s linear forwards;
 }
@@ -811,7 +811,6 @@ body > div > nav div.presentation > h3.presentation__subtitle {
 body > div .restaurant-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 10px 20px;
   border-radius: 50px 50px 0px 0px;
   margin-top: -50px;

@@ -114,3 +114,7 @@ $btn: (
     animation: fill-in .4s linear forwards;
   }
 }
+
+.restaurant-menu__heart-icon {
+  @extend .restaurant-card__heart-icon
+}
