@@ -89,9 +89,18 @@
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 5px 30px 0px rgba(black, .08);
-  animation: fade-in 1s 3.6s linear;
   overflow: hidden;
+  // animation: fade-in 1s 3.6s linear;
   cursor: pointer;
+  &--starter {
+    animation: fade-in 1s 3.6s linear backwards;
+  }
+  &--dish {
+    animation: fade-in 1s 4s linear backwards;
+  }
+  &--dessert {
+    animation: fade-in 1s 4.4s linear backwards;
+  }
   &__checked {
     display: flex;
     justify-content: center;
@@ -128,6 +137,9 @@
       > h2 {
       font-size: 16px;
       margin: 0 0 5px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     > div {
       display: flex;
@@ -146,6 +158,9 @@
         margin: 0;
         font-size: 14px;
         font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }

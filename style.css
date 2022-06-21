@@ -1,73 +1,10 @@
 /**/
 /**/
+/**/
+/**/
+/**/
+/**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 1;
-  }
-}
-@keyframes loading {
-  0%, 99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translate(0, 10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-@keyframes fill-in {
-  0% {
-    background: linear-gradient(to top, #FF79DA 0%, #9356DC 0%, white 5%);
-  }
-  10% {
-    background: linear-gradient(to top, #FF79DA 5%, #9356DC 0%, white 10%);
-  }
-  20% {
-    background: linear-gradient(to top, #FF79DA 10%, #9356DC 0%, white 15%);
-  }
-  30% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 15%, white 20%);
-  }
-  40% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 25%, white 50%);
-  }
-  50% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 35%, white 50%);
-  }
-  60% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 50%, white 60%);
-  }
-  70% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 60%, white 70%);
-  }
-  80% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 75%, white 80%);
-  }
-  90% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 85%, white 90%);
-  }
-  100% {
-    background: linear-gradient(to top, #FF79DA 15%, #9356DC 95%, white 100%);
-  }
-}
-/**/
-/**/
-/**/
-/**/
 :root {
   font-family: "typography des contenus";
 }
@@ -566,9 +503,17 @@ a:visited {
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.08);
-  animation: fade-in 1s 3.6s linear;
   overflow: hidden;
   cursor: pointer;
+}
+.dishes-card--starter {
+  animation: fade-in 1s 3.6s linear backwards;
+}
+.dishes-card--dish {
+  animation: fade-in 1s 4s linear backwards;
+}
+.dishes-card--dessert {
+  animation: fade-in 1s 4.4s linear backwards;
 }
 .dishes-card__checked {
   display: flex;
@@ -607,6 +552,9 @@ a:visited {
 .dishes-card__content > h2 {
   font-size: 16px;
   margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dishes-card__content > div {
   display: flex;
@@ -625,6 +573,9 @@ a:visited {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .loading-spinner {
@@ -645,6 +596,69 @@ a:visited {
   opacity: 0;
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0%, 99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fill-in {
+  0% {
+    background: linear-gradient(to top, #FF79DA 0%, #9356DC 0%, white 5%);
+  }
+  10% {
+    background: linear-gradient(to top, #FF79DA 5%, #9356DC 0%, white 10%);
+  }
+  20% {
+    background: linear-gradient(to top, #FF79DA 10%, #9356DC 0%, white 15%);
+  }
+  30% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 15%, white 20%);
+  }
+  40% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 25%, white 50%);
+  }
+  50% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 35%, white 50%);
+  }
+  60% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 50%, white 60%);
+  }
+  70% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 60%, white 70%);
+  }
+  80% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 75%, white 80%);
+  }
+  90% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 85%, white 90%);
+  }
+  100% {
+    background: linear-gradient(to top, #FF79DA 15%, #9356DC 95%, white 100%);
+  }
+}
 /**/
 .header--bsBlue, .header {
   z-index: 2;
