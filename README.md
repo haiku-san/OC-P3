@@ -7,7 +7,7 @@ Projet n°3 de la formation développeur frontend d'Openclassrooms : "Dynamisez 
 
 Clonez le repo GitHub
 ```bash
-  git clone https://github.com/haiku-san/OC-P2/tree/main
+  git clone https://github.com/haiku-san/OC-P3/tree/main
 ```
 
 Installez les dépendances
